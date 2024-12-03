@@ -19,6 +19,9 @@
 	GLOB.huds += new/datum/atom_hud/antag()
 	GLOB.special_roles |= ROLE_VOX_RAIDER
 
+	GLOB.huds += new/datum/atom_hud/antag()
+	GLOB.special_roles |= ROLE_SHADOWLING
+
 	SSradio.ANTAG_FREQS |= list(VOX_RAID_FREQ)
 
 	SSradio.radiochannels |= list(

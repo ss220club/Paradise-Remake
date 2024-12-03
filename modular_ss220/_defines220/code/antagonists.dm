@@ -1,5 +1,6 @@
 #define ROLE_BLOOD_BROTHER "blood brother"
 #define ROLE_VOX_RAIDER "vox raider"
+#define ROLE_SHADOWLING "shadowling"
 
 #define VOX_RAID_FREQ 1220
 
