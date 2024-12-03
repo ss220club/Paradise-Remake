@@ -437,3 +437,83 @@
 	lefthand_file = 'modular_ss220/clothing/icons/inhands/left_hand.dmi'
 	righthand_file = 'modular_ss220/clothing/icons/inhands/right_hand.dmi'
 
+/obj/item/clothing/suit/storage/midnight_coat
+	name = "потрёпанное пальто"
+	desc = "Чёрное пальто с меховым воротником, подклатка которого подшита плотным слоем дюраткани. На внутренней стороне имеется нашивка в виде букв ''M.B.'', вплетенных в символ звезды."
+	icon = 'modular_ss220/clothing/icons/object/suits.dmi'
+	icon_state = "midnight_coat"
+	icon_override = 'modular_ss220/clothing/icons/mob/suits.dmi'
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
+	armor = list(MELEE = 15, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, RAD = 0, FIRE = 10, ACID = 5)
+	allowed = list(/obj/item/gun, /obj/item/flashlight, /obj/item/tank/internals, /obj/item/melee/baton, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/restraints/handcuffs, /obj/item/dualsaber)
+	sprite_sheets = list(
+		"Human" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Tajaran" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Vulpkanin" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Kidan" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Skrell" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Nucleation" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Skeleton" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Slime People" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Unathi" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Grey" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Abductor" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Golem" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Machine" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Diona" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Nian" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Shadow" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Vox" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+		"Drask" = 'modular_ss220/clothing/icons/mob/suits.dmi',
+	)
+	var/datum/action/item_action/chameleon/stealth/stealth_action
+
+/datum/action/item_action/chameleon/stealth
+	name = "стелс-режим"
+	button_overlay_icon_state = "mech_lights_off"
+	var/stealth_alpha = 75
+	var/equiped = 0
+
+/datum/action/item_action/chameleon/stealth/Grant(mob/M)
+	..()
+
+/datum/action/item_action/chameleon/change/Remove(mob/M)
+	if(M && (M == owner))
+		M.alpha = initial(M.alpha)
+		LAZYREMOVE(M.actions, src)
+	..()
+
+/datum/action/item_action/chameleon/stealth/Trigger(left_click)
+	. = ..()
+	set_stealth(owner)
+
+/datum/action/item_action/chameleon/stealth/proc/set_stealth(mob/user)
+	if(user.alpha != stealth_alpha)
+		user.alpha = stealth_alpha
+	else
+		user.alpha = initial(user.alpha)
+
+
+/obj/item/clothing/suit/storage/midnight_coat/Initialize(mapload)
+	. = ..()
+	stealth_action = new(src)
+
+/obj/item/clothing/suit/storage/midnight_coat/Destroy()
+	QDEL_NULL(stealth_action)
+	return ..()
+
+
+/obj/item/clothing/suit/storage/midnight_coat/item_action_slot_check(slot, mob/user)
+	. = ..()
+	if(slot == SLOT_HUD_OUTER_SUIT)
+		return TRUE
+	else
+		user.alpha = initial(user.alpha)
+
+/obj/item/clothing/suit/storage/midnight_coat/midnight_mantle
+	name = "чёрная мантия"
+	desc = "Стильная лёгкая мантия, позволяющая владельцу скрываться в объятиях тьмы. Во всяком случае, так заявлял продавец. \
+		На внутренней стороне имеется нашивка в виде букв ''M.B.'', вплетенных в символ звезды."
+	icon = 'modular_ss220/clothing/icons/object/suits.dmi'
+	icon_state = "midnight_mantle"

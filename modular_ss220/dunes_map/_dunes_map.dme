@@ -1,0 +1,26 @@
+#include "_dunes_map.dm"
+
+#include "code/areas.dm"
+#include "code/fauna.dm"
+#include "code/flora.dm"
+#include "code/misc.dm"
+#include "code/objects.dm"
+#include "code/turfs.dm"
+#include "code/shuttle.dm"
+#include "code/rubble.dm"
+#include "code/decals.dm"
+#include "code/weather.dm"
+#include "code/vehicle.dm"
+#include "code/mobs.dm"
+#include "code/dummy.dm"
+#include "code/gate.dm"
+#include "code/holofix.dm"
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+// BEGIN_INCLUDE
+// END_INCLUDE

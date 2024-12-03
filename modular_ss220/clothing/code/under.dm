@@ -314,3 +314,32 @@
 		"Vox" = 'modular_ss220/clothing/icons/mob/species/vox/under.dmi',
 		"Drask" = 'modular_ss220/clothing/icons/mob/species/drask/under.dmi',
 	)
+
+/obj/item/clothing/under/midnight_under
+	name = "профессиональный тактический костюм"
+	desc = "Костюм настоящих профессионалов. Лёгкий и практичный, обладает встроенной активной терморегуляционной системой и повышенной прочностью за счет вплетенных пластитановых волокон. \
+		Надевая его вы чувстуете себя менее заметным."
+	icon = 'modular_ss220/clothing/icons/object/under.dmi'
+	icon_state = "midnight_under"
+	item_color = "midnight_under"
+	sprite_sheets = list(
+		"Human" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Tajaran" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Vulpkanin" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Kidan" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Skrell" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Nucleation" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Skeleton" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Slime People" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Unathi" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Grey" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Abductor" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Golem" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Machine" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Diona" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Nian" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Shadow" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Vox" = 'modular_ss220/clothing/icons/mob/under.dmi',
+		"Drask" = 'modular_ss220/clothing/icons/mob/under.dmi',
+	)
+	armor = list(MELEE = 10, BULLET = 10, LASER = 5, ENERGY = 5, BOMB = 5, RAD = 0, FIRE = 5, ACID = 50)
