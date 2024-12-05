@@ -61,6 +61,7 @@ SUBSYSTEM_DEF(jobs)
 
 /datum/controller/subsystem/jobs/proc/Debug(text)
 	job_debug.Add(text)
+	log_jobs(text)
 
 /datum/controller/subsystem/jobs/proc/GetJob(rank)
 	if(!length(occupations))
