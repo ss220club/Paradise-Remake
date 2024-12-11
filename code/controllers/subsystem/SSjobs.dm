@@ -214,9 +214,10 @@ SUBSYSTEM_DEF(jobs)
 				probability_of_antag_role_restriction /= 10
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
-			AssignRole(player, job.title)
-			unassigned -= player
-			break
+			var role_assigned = AssignRole(player, job.title)
+			if(role_assigned)
+				unassigned -= player
+				break
 
 /datum/controller/subsystem/jobs/proc/ResetOccupations()
 	for(var/mob/new_player/player in GLOB.player_list)
@@ -406,9 +407,10 @@ SUBSYSTEM_DEF(jobs)
 								probability_of_antag_role_restriction /= 10
 						Debug("DO pass, Player: [player], Level:[level], Job:[job.title]")
 						Debug(" - Job Flag: [job.flag] Job Department: [player.client.prefs.active_character.GetJobDepartment(job, level)] Job Current Pos: [job.current_positions] Job Spawn Positions = [job.spawn_positions]")
-						AssignRole(player, job.title)
-						unassigned -= player
-						break
+						var role_assigned = AssignRole(player, job.title)
+						if(role_assigned)
+							unassigned -= player
+							break
 
 	Debug("DO, Standard Check end")
 	Debug("DO, Running Alternate Check")
