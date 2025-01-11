@@ -229,4 +229,9 @@
 			atom_say("Статус пациента: [patientStatus].")
 			patientStatusHolder = table.patient.stat
 
+/obj/machinery/computer/operating/clockwork
+	name = "brass operating computer"
+	desc = "Staring at this causes your head to fill with static."
+	icon_state = "computer_clockwork"
+
 #undef OP_COMPUTER_COOLDOWN

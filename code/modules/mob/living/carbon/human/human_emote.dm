@@ -323,7 +323,7 @@
 		)
 		if(cig.lit)
 			to_chat(user, "<span class='userdanger'>Горящая [cig] жжется по пути вниз!")
-			user.unEquip(cig)
+			user.unequip(cig)
 			qdel(cig)
 			H.adjustFireLoss(5)
 		return TRUE
