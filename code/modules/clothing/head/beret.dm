@@ -9,7 +9,6 @@
 	dog_fashion = /datum/dog_fashion/head/beret
 
 	sprite_sheets = list(
-		"Kidan" = 'icons/mob/clothing/species/kidan/head/beret.dmi',
 		"Vox" = 'icons/mob/clothing/species/vox/head/beret.dmi'
 		)
 
@@ -186,8 +185,7 @@
 
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/head/beret.dmi',
-		"Drask" = 'icons/mob/clothing/species/drask/head/beret.dmi',
-		"Kidan" = 'icons/mob/clothing/species/kidan/head/beret.dmi'
+		"Drask" = 'icons/mob/clothing/species/drask/head/beret.dmi'
 	)
 
 /obj/item/clothing/head/beret/nct/green
@@ -197,8 +195,7 @@
 
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/head/beret.dmi',
-		"Drask" = 'icons/mob/clothing/species/drask/head/beret.dmi',
-		"Kidan" = 'icons/mob/clothing/species/kidan/head/beret.dmi'
+		"Drask" = 'icons/mob/clothing/species/drask/head/beret.dmi'
 	)
 
 //Special Roles
