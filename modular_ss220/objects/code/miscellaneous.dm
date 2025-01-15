@@ -2,6 +2,15 @@
 * Use that for creating non-varedited objects,
 * or that you don't want to specify because they're insignificant for personal DM file
 */
+// Mine
+/obj/effect/mine/explosive/desert
+	icon = 'modular_ss220/objects/icons/mine.dmi'
+	icon_state = "desertminearmed"
+	range_heavy = 1
+	range_light = 3
+	range_flash = 4
+	layer = LOW_OBJ_LAYER
+
 // Fountain
 /obj/structure/statue/fountain
 	name = "фонтан"

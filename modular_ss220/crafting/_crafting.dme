@@ -1,0 +1,3 @@
+#include "_crafting.dm"
+
+#include "code/crafting.dm"

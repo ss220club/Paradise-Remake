@@ -168,7 +168,7 @@
 /turf/simulated/floor/beach/away/sand_alternative/Initialize(mapload)
 	. = ..()
 	if(prob(15))
-		icon_state = "sand[rand(1,4)]"
+		icon_state = initial(icon_state) + "[rand(1, 4)]"
 
 /turf/simulated/floor/beach/away/sand_alternative/remove_plating(mob/user)
 	return
@@ -178,6 +178,11 @@
 
 /turf/simulated/floor/beach/away/sand_alternative/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	return
+
+/turf/simulated/floor/beach/away/sand_alternative/dark
+	icon_state = "darksand"
+	base_icon_state = "darksand"
+	baseturf = /turf/simulated/floor/beach/away/sand_alternative/dark
 
 /turf/simulated/floor/beach/away/coastline/alternative
 	icon = 'modular_ss220/maps220/icons/floors.dmi'
@@ -284,6 +289,12 @@
 	base_icon_state = "water"
 	water_overlay_image = null
 
+/turf/simulated/floor/beach/away/water/deep/muddy
+	icon = 'modular_ss220/maps220/icons/floors.dmi'
+	icon_state = "water_muddy"
+	base_icon_state = "water_muddy"
+	water_overlay_image = null
+
 /turf/simulated/floor/plating/xen
 	name = "strange weeds"
 	icon = 'modular_ss220/maps220/icons/floors.dmi'
@@ -311,3 +322,39 @@
 	light_color = null
 	light_power = 0
 	light_range = 0 // removing faint glow
+
+// MARK: Miscellaneous
+
+// Withered grounds
+/turf/simulated/floor/plating/asteroid/wasteland
+	name = "dead soil"
+	icon = 'modular_ss220/maps220/icons/floors.dmi'
+	icon_state = "wasteland"
+	environment_type = "wasteland"
+	turf_type = /turf/simulated/floor/plating/asteroid/wasteland
+
+/turf/simulated/floor/plating/asteroid/caverock
+	name = "withered ground"
+	icon = 'modular_ss220/maps220/icons/floors.dmi'
+	icon_state = "caverock0"
+	environment_type = "caverock"
+	turf_type = /turf/simulated/floor/plating/asteroid/caverock
+
+/turf/simulated/floor/plating/asteroid/caverock/Initialize(mapload)
+	. = ..()
+	icon_state = "[environment_type][rand(0, 10)]"
+
+/turf/simulated/floor/plating/asteroid/caverock/alt
+	icon_state = "caverockdeep0"
+	environment_type = "caverockdeep"
+	turf_type = /turf/simulated/floor/plating/asteroid/caverock/alt
+
+// Lava
+/turf/simulated/floor/lava/caverock
+	icon = 'modular_ss220/maps220/icons/lava.dmi'
+	baseturf = /turf/simulated/floor/lava/caverock
+
+// Chasm
+/turf/simulated/floor/chasm/straight_down/caverock
+	icon = 'modular_ss220/maps220/icons/chasm.dmi'
+	baseturf = /turf/simulated/floor/chasm/straight_down/caverock

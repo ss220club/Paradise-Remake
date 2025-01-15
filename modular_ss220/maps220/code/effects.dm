@@ -71,6 +71,38 @@
 	desc = "Glory to humanity!"
 
 /* Beach */
+// Decals
+/obj/effect/turf_decal/sand
+	name = "sand"
+	density = FALSE
+	icon = 'modular_ss220/maps220/icons/decals.dmi'
+	icon_state = "sand_side"
+
+/obj/effect/turf_decal/sand/end
+	icon_state = "sand_surround"
+
+/obj/effect/turf_decal/sand/box
+	icon_state = "sand_full"
+
+/obj/effect/turf_decal/sand/light
+	icon_state = "lightsand_side"
+
+/obj/effect/turf_decal/sand/end/light
+	icon_state = "lightsand_surround"
+
+/obj/effect/turf_decal/sand/box/light
+	icon_state = "lightsand_full"
+
+/obj/effect/turf_decal/sand/dark
+	icon_state = "darksand_side"
+
+/obj/effect/turf_decal/sand/end/dark
+	icon_state = "darksand_surround"
+
+/obj/effect/turf_decal/sand/box/dark
+	icon_state = "darksand_full"
+
+// Items
 /obj/item/toy/seashell
 	name = "ракушка"
 	desc = "Пусть у вас всегда будет ракушка в кармане и песок в ботинках. Что бы это ни значило."
