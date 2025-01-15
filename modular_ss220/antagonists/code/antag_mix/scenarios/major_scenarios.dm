@@ -17,9 +17,8 @@
 
 	is_crew_antag = FALSE
 	landmark_type = /obj/effect/landmark/spawner/vox_raider
-	possible_species = list("Vox")
-	recommended_species_active_pref = list("Vox")
-	recommended_species_mod = 8
+	species_pool = list("Vox")
+	recommended_species_active_pref = list("Vox" = 8)
 
 
 /datum/antag_scenario/team/vox_raiders/equip_character(datum/mind/mind)

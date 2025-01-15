@@ -115,7 +115,7 @@
 		"Special Operations Officer",
 		"Syndicate Officer",
 		"Solar Federation General")
-	possible_species = list("Machine")
+	allowed_species = list("Machine")
 
 /datum/antag_scenario/team/blood_brothers
 	name = "Blood Brothers"

@@ -1,4 +1,4 @@
-/datum/antagonist/proc/make_body(loc_spawn, datum/mind/mind, try_use_preference = FALSE, species_name = null, list/possible_species)
+/datum/antagonist/proc/make_body(loc_spawn, datum/mind/mind, try_use_preference = FALSE, species_name = null, list/species_pool)
 	var/datum/character_save/character
 	var/mob/living/carbon/human/H = mind.current
 	if(!H)
@@ -8,18 +8,20 @@
 
 	var/client/client = mind.current.client
 	if(try_use_preference && client && client.prefs && length(client.prefs.character_saves))
-		var/temp_species_name = species_name
-		if(!temp_species_name)
-			if(length(possible_species))
-				temp_species_name = pick(possible_species)
-			else
-				temp_species_name = "Human"
+		var/list/species_pool_to_use
+		if(species_name)
+			species_pool_to_use.Add(species_name)
+		else
+			species_pool_to_use = species_pool
+
+		var/list/eligible_characters
 		for(var/datum/character_save/temp_character in client.prefs.character_saves)
-			if(temp_character.species == temp_species_name)
-				character = temp_character
-				species_name = temp_species_name
-				new_name = random_name(character.gender, character.species)
-				break
+			for(var/temp_species_name in species_pool_to_use)
+				if(temp_character.species == temp_species_name)
+					eligible_characters.Add(temp_character)
+
+		if(eligible_characters.len > 0)
+			character = pick(eligible_characters)
 
 	if(!character)
 		// Randomize appearance

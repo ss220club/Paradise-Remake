@@ -147,6 +147,6 @@
 		if(mind.current)
 			H.equipOutfit(/datum/outfit/vox, visualsOnly)
 
-/datum/antagonist/vox_raider/make_body(spawn_loc, datum/mind/mind, try_use_preference = FALSE, species_name = null, list/possible_species)
+/datum/antagonist/vox_raider/make_body(spawn_loc, datum/mind/mind, try_use_preference = FALSE, species_name = null, list/species_pool)
 	. = ..()
 	mind.store_memory("<B> Я Вокс-Рейдер, основа моя: беречь стаю, тащить ценности. </B>.")

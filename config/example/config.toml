@@ -1175,7 +1175,7 @@ tag = "mindflayer"
 	"Special Operations Officer",
 	"Solar Federation General",
 ]
-possible_species = ["Machine"]
+"allowed_species" = ["Machine"]
 
 [[antag_mix_gamemode_configuration.antag_scenarios_configuration]]
 tag = "vox_raiders"
