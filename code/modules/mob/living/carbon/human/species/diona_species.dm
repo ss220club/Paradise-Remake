@@ -17,6 +17,7 @@
 	Как гештальт-сущность, каждая Нимфа обладает индивидуальностью, но общаются они коллективно. \
 	Поэтому Диона часто говорит в уникальном сочетании первого и третьего лица, используя \"Мы\" и \"Я\", чтобы отразить свою единую, но многогранную природу."
 
+	eyes = "blank_eyes"
 	species_traits = list(NO_HAIR)
 	inherent_traits = list(TRAIT_NOGERMS, TRAIT_NODECAY)
 	inherent_biotypes = MOB_ORGANIC | MOB_HUMANOID | MOB_PLANT
