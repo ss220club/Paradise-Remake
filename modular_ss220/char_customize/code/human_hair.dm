@@ -3,7 +3,7 @@
 */
 
 /datum/sprite_accessory/hair/crew
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	icon_state = "crewcut"
 
 /datum/sprite_accessory/hair/short
@@ -458,288 +458,288 @@
 
 /* New human hair */
 /datum/sprite_accessory/hair/hair_glammetal
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Glam Metal"
 	icon_state = "hair_glammetal"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/hair_undercut_fem_s
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Undercut Female"
 	icon_state = "hair_undercut_fem"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/hair_curtains
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Curtains"
 	icon_state = "hair_curtains"
 	species_allowed = list("Human", "Slime People")
 	glasses_over = 0
 
 /datum/sprite_accessory/hair/hair_damsel
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Damsel"
 	icon_state = "hair_damsel"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/zone_s
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Zone"
 	icon_state = "zone"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/butterfly
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Butterfly"
 	icon_state = "butterfly"
 	secondary_theme = "beads"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/cascading_long_bob
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Cascading Long Bob"
 	icon_state = "cascading_long_bob"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/jinshi
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Jinshi"
 	icon_state = "jinshi"
 	secondary_theme = "beads"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/long_strait
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Long Strait"
 	icon_state = "long_strait"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/pine
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Pine"
 	icon_state = "pine"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/short_bob
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Short Bob"
 	icon_state = "short_bob"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/waves_mid
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Waves Mid"
 	icon_state = "waves_mid"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/whim
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Whim"
 	icon_state = "whim"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/vulpkanin/tomahawk_spiker
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Tomahawk Spiker"
 	icon_state = "tomahawk_spiker"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/twosideup
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Two Side Up"
 	icon_state = "twosideup"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/lowbraid
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Low Braid"
 	icon_state = "lowbraid"
 	secondary_theme = "bow"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/glamour_short
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Glamour Short"
 	icon_state = "glamour_short"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/glamour_long
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Glamour Long"
 	icon_state = "glamour_long"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/stasy
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Stasy"
 	icon_state = "stasy"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/stasy_morning
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Stasy Morning"
 	icon_state = "stasy_morning"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/spike_pod
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Spike Pod"
 	icon_state = "spike_pod"
 	secondary_theme = "acs"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/hikka
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Hikka"
 	icon_state = "hikka"
 	secondary_theme = "acs"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/inari
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Inari"
 	icon_state = "inari"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/drow
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Drow"
 	icon_state = "drow"
 	secondary_theme = "webbing"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/harpy
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Harpy"
 	icon_state = "harpy"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/harpy_braid
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Harpy Long Braid"
 	icon_state = "harpy_braid"
 	secondary_theme = "bow"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/long_buns_alt
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Long Buns Alt"
 	icon_state = "long_buns_alt"
 	secondary_theme = "webbing"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/harpy_twinbraids
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Harpy Twinbraids"
 	icon_state = "harpy_twinbraids"
 	secondary_theme = "bow"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/cotton
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Cotton"
 	icon_state = "cotton"
 	secondary_theme = "ribb"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/kisaragi
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Kisaragi"
 	icon_state = "kisaragi"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/rockstar
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Rockstar"
 	icon_state = "rockstar"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/tribun
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Tri-bun"
 	icon_state = "tribun"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/longtwintails
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Long Twintails"
 	icon_state = "longtwintails"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/long_strand
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Long Strand Lock"
 	icon_state = "long_strand"
 	secondary_theme = "lock"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/eighties_alt
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "80s Alt"
 	icon_state = "eighties_alt"
 	secondary_theme = "acs"
 	species_allowed = list("Human", "Slime People")
 
 /datum/sprite_accessory/hair/eighties_alt_tajaran
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Tajaran 80s Alt"
 	icon_state = "eighties_alt_tajaran"
 	secondary_theme = "acs"
 	species_allowed = list("Tajaran")
 
 /datum/sprite_accessory/hair/punk_lying
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Punk Lying"
 	icon_state = "punk_lying"
 	secondary_theme = "acs"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/halfshave
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Halfshave"
 	icon_state = "halfshave"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/ruby
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Ruby"
 	icon_state = "ruby"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/long_flipped
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Long Flipped"
 	icon_state = "long_flipped"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/himeup
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Hime Big Ponytail"
 	icon_state = "himeup"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/rosemary
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Rosemary"
 	icon_state = "rosemary"
 	secondary_theme = "acs"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/slimetendrils
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Slimetendrils"
 	icon_state = "slimetendrils"
 	species_allowed = list("Slime People")
 
 /datum/sprite_accessory/hair/country
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Country"
 	icon_state = "country"
 	secondary_theme = "acs"
 	species_allowed = list("Human", "Slime People", "Tajaran")
 
 /datum/sprite_accessory/hair/jinx
-	icon = 'modular_ss220/hairs/icons/human_hair.dmi'
+	icon = 'modular_ss220/char_customize/icons/human_hair.dmi'
 	name = "Jinx"
 	icon_state = "jinx"
 	species_allowed = list("Human", "Slime People", "Tajaran")

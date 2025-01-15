@@ -16,7 +16,7 @@
 #ifdef MODPACK_CHAT_BADGES
 #include "chat_badges/_chat_badges.dme"
 #endif
-#include "hairs/_hairs.dme"
+#include "char_customize/_char_customize.dme"
 
 // --- OBJECTS --- //
 #include "awaymission_gun/_awaymission_gun.dme"
