@@ -274,44 +274,68 @@
 	for(var/datum/multilingual_say_piece/S in message_pieces)
 		S.message = stars(S.message, pr)
 
-/proc/slur(phrase, list/slurletters = ("'"))//use a different list as an input if you want to make robots slur with $#@%! characters
+// SS220 EDIT. Note: Fully rewrites proc, adding additional phrases
+/proc/slur(phrase, list/slurletters = ("'"), strength = 50)
+	strength = min(50, strength)
 	phrase = html_decode(phrase)
 	var/leng = length_char(phrase)
-	var/counter = length_char(phrase)
-	var/list/newphrase = list()
-	var/newletter
-	while(counter >= 1)
-		newletter = copytext_char(phrase, (leng - counter) + 1, (leng - counter) + 2)
+	var/newphrase = ""
+	var/newletter = ""
+	var/lowerletter = ""
+
+	for(var/counter = 1 to leng)
+		newletter = copytext_char(phrase, counter, counter + 1)
+		lowerletter = lowertext(newletter)
+
+		// Character conversion
 		if(prob(33.33))
-			if(lowertext(newletter) == "o")
-				newletter = "u"
-			if(lowertext(newletter) == "о")
-				newletter = "у"
-			if(lowertext(newletter) == "э")
-				newletter = "и"
-			if(lowertext(newletter) == "s")
-				newletter = "ch"
-			if(lowertext(newletter) == "с")
-				newletter = "сш"
-			if(lowertext(newletter) == "a")
-				newletter = "ah"
-			if(lowertext(newletter) == "а")
-				newletter = "ах"
-			if(lowertext(newletter) == "c")
-				newletter = "k"
-			if(lowertext(newletter) == "ц")
-				newletter = "сц"
+			switch(lowerletter)
+				if("o")
+					newletter = "u"
+				if("о")
+					newletter = "у"
+				if("э")
+					newletter = "и"
+				if("s")
+					newletter = "ch"
+				if("с")
+					newletter = "сш"
+				if("г")
+					newletter = "х"
+				if("a")
+					newletter = "ah"
+				if("а")
+					newletter = "ах"
+				if("c")
+					newletter = "k"
+				if("ц")
+					newletter = "сц"
+
+		// Random case replacement and adding characters from the slurletters list
 		if(prob(60))
 			if(prob(11.11))
 				newletter += pick(slurletters)
 			else
 				if(prob(50))
-					newletter = lowertext(newletter)
+					newletter = lowerletter
 				else
 					newletter = uppertext(newletter)
+
+		// Additional phrases
+		if(rand(1, 100) <= strength * 0.25)
+			switch(newletter)
+				if(" ")
+					newletter = "...эээ..."
+				if(".")
+					newletter = "...ммм..."
+				if("!")
+					newletter = "...а!..."
+				if("?")
+					newletter = "...а?..."
+
 		newphrase += newletter
-		counter -= 1
-	return newphrase.Join("")
+
+	return sanitize(newphrase)
 
 /proc/stutter(phrase, stamina_loss = 0, robotic = FALSE)
 	phrase = html_decode(phrase)
