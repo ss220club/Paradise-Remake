@@ -61,6 +61,7 @@ SUBSYSTEM_DEF(jobs)
 
 /datum/controller/subsystem/jobs/proc/Debug(text)
 	job_debug.Add(text)
+	log_jobs(text)
 
 /datum/controller/subsystem/jobs/proc/GetJob(rank)
 	if(!length(occupations))
@@ -222,9 +223,10 @@ SUBSYSTEM_DEF(jobs)
 				probability_of_antag_role_restriction /= 10
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
-			AssignRole(player, job.title)
-			unassigned -= player
-			break
+			var role_assigned = AssignRole(player, job.title)
+			if(role_assigned)
+				unassigned -= player
+				break
 
 /datum/controller/subsystem/jobs/proc/ResetOccupations()
 	for(var/mob/new_player/player in GLOB.player_list)
@@ -418,19 +420,19 @@ SUBSYSTEM_DEF(jobs)
 								probability_of_antag_role_restriction /= 10
 						Debug("DO pass, Player: [player], Level:[level], Job:[job.title]")
 						Debug(" - Job Flag: [job.flag] Job Department: [player.client.prefs.active_character.GetJobDepartment(job, level)] Job Current Pos: [job.current_positions] Job Spawn Positions = [job.spawn_positions]")
-						AssignRole(player, job.title)
-						unassigned -= player
-						break
+						var role_assigned = AssignRole(player, job.title)
+						if(role_assigned)
+							unassigned -= player
+							break
+
+	Debug("DO, Standard Check end")
+	Debug("DO, Running Alternate Check")
 
 	// Hand out random jobs to the people who didn't get any in the last check
 	// Also makes sure that they got their preference correct
 	for(var/mob/new_player/player in unassigned)
 		if(player.client.prefs.active_character.alternate_option == GET_RANDOM_JOB)
 			GiveRandomJob(player)
-
-	Debug("DO, Standard Check end")
-
-	Debug("DO, Running AC2")
 
 	// Antags, who have to get in, come first
 	for(var/mob/new_player/player in unassigned)
@@ -447,10 +449,14 @@ SUBSYSTEM_DEF(jobs)
 
 	// Then we assign what we can to everyone else.
 	for(var/mob/new_player/player in unassigned)
-		if(player.client.prefs.active_character.alternate_option == BE_ASSISTANT)
-			Debug("AC2 Assistant located, Player: [player]")
+		if(player.client.prefs.active_character.alternate_option != RETURN_TO_LOBBY)
+			Debug("AC unemployed located, assigning assistant, Player: [player]")
 			AssignRole(player, "Assistant")
-		else if(player.client.prefs.active_character.alternate_option == RETURN_TO_LOBBY)
+		else if(player.mind.special_role)
+			Debug("AC unemployed antagonist located, force assigning assistant, Player: [player]")
+			AssignRole(player, "Assistant")
+		else
+			Debug("AC unemployed located, return to lobby, Player: [player]")
 			player.ready = FALSE
 			unassigned -= player
 
