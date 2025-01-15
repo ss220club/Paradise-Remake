@@ -16,6 +16,8 @@
 	layer = TURF_LAYER
 	desc = "Death to Nanotrasen."
 
+/obj/effect/turf_decal/raven/five
+
 // Turf decals
 /obj/effect/turf_decal/miscellaneous
 	icon_state = null
@@ -220,3 +222,50 @@ GLOBAL_LIST_EMPTY(bump_teleporters)
 
 /obj/effect/light_emitter/colored/lime
 	light_color = "#6AFF00"
+
+/* Awaymission - Snowdwin */
+//Snowdwin station sign
+/obj/effect/turf_decal/arctic_post_13_down
+	icon_state = "AOP1"
+
+/obj/effect/turf_decal/arctic_post_13_down/two
+	icon_state = "AOP2"
+
+/obj/effect/turf_decal/arctic_post_13_down/three
+	icon_state = "AOP3"
+
+/obj/effect/turf_decal/arctic_post_13_down/four
+	icon_state = "AOP4"
+
+/obj/effect/turf_decal/arctic_post_13_down/five
+	icon_state = "AOP5"
+
+/obj/effect/turf_decal/arctic_post_13_down/six
+	icon_state = "AOP6"
+
+/obj/effect/turf_decal/arctic_post_13_down/seven
+	icon_state = "AOP7"
+
+/obj/effect/turf_decal/arctic_post_13_up
+	icon_state = "AOPU1"
+
+/obj/effect/turf_decal/arctic_post_13_up/two
+	icon_state = "AOPU2"
+
+/obj/effect/turf_decal/arctic_post_13_up/three
+	icon_state = "AOPU3"
+
+/obj/effect/turf_decal/arctic_post_13_up/four
+	icon_state = "AOPU4"
+
+/obj/effect/turf_decal/arctic_post_13_up/five
+	icon_state = "AOPU5"
+
+/obj/effect/turf_decal/arctic_post_13_up/six
+	icon_state = "AOPU6"
+
+/obj/effect/turf_decal/arctic_post_13_up/seven
+	icon_state = "AOPU7"
+
+/obj/effect/turf_decal/weather/snow
+	icon = 'modular_ss220/maps220/icons/decals.dmi'

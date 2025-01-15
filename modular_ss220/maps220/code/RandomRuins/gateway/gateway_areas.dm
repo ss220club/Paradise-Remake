@@ -799,3 +799,23 @@
 /area/awaymission/space_battle/sec_storage
 	name = "\improper Turret Room"
 	icon_state = "awaycontent10"
+
+// MARK: Snowdwin
+/area/awaymission/snowdwin
+	name = "\improper Snowdwin"
+	icon_state = "awaycontent1"
+	requires_power = TRUE
+	report_alerts = FALSE
+	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+
+/area/awaymission/snowdwin/test1
+	name = "\improper Hallway"
+	icon_state = "awaycontent23"
+
+/area/awaymission/snowdwin/test2
+	name = "\improper Hallway"
+	icon_state = "awaycontent24"
+
+/area/awaymission/snowdwin/test3
+	name = "\improper Hallway"
+	icon_state = "awaycontent25"

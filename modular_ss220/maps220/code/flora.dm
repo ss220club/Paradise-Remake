@@ -60,3 +60,13 @@
 /obj/structure/flora/biolumini/lamp/weaklight
 	light_power = 0.5
 
+/* Snowdwin */
+/obj/structure/flora/tree/pine/stump
+	name = "pine stump"
+	icon = 'modular_ss220/maps220/icons/pinetrees.dmi'
+	icon_state = "tree_stump"
+	density = FALSE
+
+/obj/structure/flora/tree/pine/stump/Initialize(mapload)
+	. = ..()
+	icon_state = initial(icon_state)

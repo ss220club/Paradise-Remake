@@ -1,3 +1,5 @@
+#define SMOOTH_GROUP_SNOW S_TURF(34)
+
 // MARK: Indestructible
 
 // Grass
@@ -311,3 +313,54 @@
 	light_color = null
 	light_power = 0
 	light_range = 0 // removing faint glow
+
+// MARK: Snowdwin
+/turf/simulated/floor/plating/asteroid/snow/plating_smoth
+	name = "snowed-over plating"
+	desc = "A section of heated plating, helps keep the snow from stacking up too high."
+	icon = 'modular_ss220/maps220/icons/floors.dmi'
+	icon_state = "snow_turf-255"
+	base_icon_state = "snow_turf"
+	slowdown = 0
+	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
+	smoothing_groups = list(SMOOTH_GROUP_TURF, SMOOTH_GROUP_SNOW)
+	canSmoothWith = list(SMOOTH_GROUP_SNOW)
+
+/turf/simulated/floor/plating/asteroid/snow/ice
+	name = "icy snow"
+	icon = 'modular_ss220/maps220/icons/floors.dmi'
+	baseturf = /turf/simulated/floor/plating/asteroid/snow/ice
+	slowdown = 0
+
+/turf/simulated/floor/plating/asteroid/snow/ice/Initialize(mapload)
+	icon_state = "snow-ice"
+
+/turf/simulated/floor/plating/cold
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+	temperature = 180
+
+/turf/simulated/floor/plasteel/cold
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+	temperature = 180
+
+/turf/simulated/floor/lava/plasma/fuming/ice
+	icon = 'modular_ss220/maps220/icons/floors.dmi'
+	baseturf = /turf/simulated/floor/lava/plasma/fuming/ice
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+
+	temperature = 180
+	oxygen = MOLES_O2STANDARD
+	nitrogen = MOLES_N2STANDARD
+	carbon_dioxide = 0
+	toxins = 0
+	light_range = 3
+	light_power = 0.75
+	light_color = LIGHT_COLOR_PINK
+
+/turf/simulated/floor/engine/cult/cold
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+	temperature = 180

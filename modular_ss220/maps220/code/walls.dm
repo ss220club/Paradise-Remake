@@ -1,3 +1,5 @@
+#define SMOOTH_GROUP_ICE_WALL S_TURF(33)
+
 /* Indestructible */
 /turf/simulated/wall/indestructible/rock/mineral
 	name = "dense rock"
@@ -130,3 +132,74 @@
 /*Black Mesa*/
 /turf/simulated/wall/indestructible/rock/mineral/xen
 	color = "#4e1a02"
+
+/*Snow Dwin*/
+/turf/simulated/wall/indestructible/rock/mineral/snow
+	color = COLOR_ASSEMBLY_WHITE
+
+/turf/simulated/wall/indestructible/snow
+	name = "wall"
+	desc = "A wall covered in a thick sheet of ice."
+	icon = 'modular_ss220/maps220/icons/icedmetal_wall.dmi'
+	icon_state = "icedmetal_wall-0"
+	base_icon_state = "icedmetal_wall"
+
+/turf/simulated/wall/snow
+	name = "wall"
+	desc = "A wall covered in a thick sheet of ice."
+	icon = 'modular_ss220/maps220/icons/icedmetal_wall.dmi'
+	icon_state = "icedmetal_wall-0"
+	base_icon_state = "icedmetal_wall"
+
+/turf/simulated/mineral/ice
+	environment_type = "ice"
+	turf_type = /turf/simulated/floor/plating/asteroid/snow/ice
+	baseturf = /turf/simulated/floor/plating/asteroid/snow/ice
+	temperature = 180
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+	color = COLOR_ASSEMBLY_WHITE
+	should_reset_color = FALSE
+
+/turf/simulated/mineral/plasma/ice
+	environment_type = "ice"
+	turf_type = /turf/simulated/floor/plating/asteroid/snow/ice
+	baseturf = /turf/simulated/floor/plating/asteroid/snow/ice
+	temperature = 180
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+	color = COLOR_ASSEMBLY_WHITE
+	should_reset_color = FALSE
+
+/turf/simulated/mineral/iron/ice
+	environment_type = "ice"
+	turf_type = /turf/simulated/floor/plating/asteroid/snow/ice
+	baseturf = /turf/simulated/floor/plating/asteroid/snow/ice
+	temperature = 180
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+	color = COLOR_ASSEMBLY_WHITE
+	should_reset_color = FALSE
+
+/turf/simulated/mineral/diamond/ice
+	environment_type = "ice"
+	turf_type = /turf/simulated/floor/plating/asteroid/snow/ice
+	baseturf = /turf/simulated/floor/plating/asteroid/snow/ice
+	temperature = 180
+	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
+	atmos_environment = ENVIRONMENT_COLD
+	color = COLOR_ASSEMBLY_WHITE
+	should_reset_color = FALSE
+
+/turf/simulated/wall/mineral/snow
+	name = "snow wall"
+	desc = "A wall with silver plating. Icy!"
+	icon = 'modular_ss220/maps220/icons/snow_wall.dmi'
+	icon_state = "snow_wall-0"
+	base_icon_state = "snow_wall"
+	sheet_type = /obj/item/stack/sheet/mineral/snow
+	baseturf = /turf/simulated/floor/plating/cold
+	hardness = 70
+	explosion_block = 0
+	smoothing_groups = list(SMOOTH_GROUP_SIMULATED_TURFS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_SILVER_WALLS)
+	canSmoothWith = list(SMOOTH_GROUP_SILVER_WALLS)
