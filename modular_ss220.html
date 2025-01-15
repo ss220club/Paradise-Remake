@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="dmdoc.css"><title>modular_ss220/README.md - Space Station 13</title></head><body><header><a href="index.html">Space Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>Модпаки <aside>modular_ss220/README.md</aside> <a href="https://github.com/ss220club/Paradise-SS220/blob/362521131d990f321e51937931f4a905582748a2/modular_ss220/README.md0"><img src="git.png" width="16" height="16" title="modular_ss220/README.md0"></a></h1><table class="summary" cellspacing="0"><tr><td colspan="2"><p>Модпаки загружаются компилятором сразу после всего остального кода и после карты, что позволяет делать оверрайды, безболезненно добавлять предметы, пользуясь дефайнами из <em>core code</em> и много много всего.</p>
+<p>Инициализируются же модпаки на этапе <code>INIT_ORDER_MODPACKS</code> сразу после <code>INIT_ORDER_INPUT</code> с вызовом соответствующего прока у датума.
+Подробнее можно почитать в [<code>mods/_modpack.dm</code>]</p>
+<h2 id="зачем">Зачем?</h2>
+<ol>
+<li>Чтобы не изменять <em>core code</em>, а оверрайдить здесь</li>
+<li>Удобный ввод новых предметов</li>
+<li>Сохранять ивентовые паки для последующего возможного использования в других ивентах</li>
+</ol>
+<h2 id="создание-модпака">Создание модпака</h2>
+<p>Любой модпак состоит из:</p>
+<ul>
+<li>
+<p>Папки пака</p>
+</li>
+<li>
+<p><code>.dme</code> файла с подключением всех остальных</p>
+</li>
+<li>
+<p><code>.dm</code> файла с датумом, содержащем информацию о паке</p>
+</li>
+<li>
+<p>Остальных файлов пака</p>
+</li>
+</ul>
+<p>Быстро создать модпак можно с помощью скрипта <code>modular_ss220/create_modpack.bat</code>.</p>
+<h3 id="структура-модпака">Структура модпака</h3>
+<p>Если мы условимся, что наш пак будет называется <code>hello_world</code>, то это будет выглядеть так:</p>
+<pre><code class="language-text">modular_ss220/hello_world
+|- _hello_world.dm
+|- _hello_world.dme
+|- any_file.dm
+|- ...
+\- some_file.dm
+</code></pre>
+<p>А теперь каждый файл по отдельности:</p>
+<h3 id=""><code>modular_ss220/hello_world/_hello_world.dme</code></h3>
+<pre><code class="language-dm">#include &quot;_hello_world.dm&quot;
+
+#include &quot;any_file.dm&quot;
+// ...
+#include &quot;some_file.dm&quot;
+</code></pre>
+<p>Здесь подключаются все необходимые файлы, включая файл с датумом модпака. Ничего особенного.</p>
+<p>Стоит лишь учитывать, что пути локальные, а не глобальные.</p>
+<h3 id=""><code>modular_ss220/hello_world/_hello_world.dm</code></h3>
+<pre><code class="language-dm">/datum/modpack/hello_world
+    name = &quot;Hello world&quot;
+    desc = &quot;Описание модпака&quot;
+    author = &quot;SuhEugene&quot; // Хороший мужик, систему модапаков у него 'позаимствована'.
+</code></pre>
+<ul>
+<li><code>name</code> - Имя пака. Необязательно такое же, как в коде, но желательно.</li>
+<li><code>desc</code> - Очевидно, описание пака. Хотелось бы, чтобы оно было достаточно подробным, чтобы можно было понять что содержит пак, но не сильно замудрённым, чтобы любой игрок осилил буквы.</li>
+<li><code>author</code> - Никнейм на гитхабе, тег дискорда или даже несколько таких. Просто чтобы обозначить автора(ов) в простейшей форме.</li>
+</ul>
+<h3 id=""><code>modular_ss220/hello_world/any_file.dm</code></h3>
+<p>Это просто любой файл. Как в названии и написано. И название необязательно такое. Просто какой-либо угодно файл с dm кодом.</p>
+<h2 id="ассеты">Ассеты</h2>
+<p>Этим обобщающим словом обычно называют картинки и звуки. Их я попрошу оставлять в папке <code>modular_ss220/hello_world/icons/</code> и в <code>modular_ss220/hello_world/sound/</code> соответственно.
+Лучше всего, если модпак будет использовать собственные ассеты и не обращаться к <em>пакам</em> или же другим модпакам.</p></td></tr></table></main><footer>paradise.dme <a href="https://github.com/ss220club/Paradise-SS220/tree/362521131d990f321e51937931f4a905582748a2">3625211</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.9.0</a></footer></body></html>
